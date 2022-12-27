@@ -1,2 +1,12 @@
-GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1216.768 ms
-GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1114.958 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1183.523 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1255.308 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1126.670 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1112.993 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1089.008 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 200 959 - 1115.434 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.617 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.633 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.476 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.573 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.541 ms
+GET /services/aux/api/v1/connectors/bad2b788-2fd1-4940-8489-d2cf66a32ff4 429 71 - 0.439 ms

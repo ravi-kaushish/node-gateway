@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const Gateway = require('./routes/gateway');
 const { Cors } = require('./middlewares/cors');
-const { Logger } = require('./utils/logger');
+const { Logger } = require('./middlewares/logger');
 
 //Setting port to run app
 const PORT = process.env.PORT || 8000;
@@ -13,8 +14,10 @@ const app = express();
 //Enabling CORS
 app.use(Cors);
 
-//Enabling Logging
-app.use(Logger);
+//Enabling Logging if user OPTS
+// if (process.env.ENABLE_HTTP_LOGGING) {
+//     app.use(Logger);
+// }
 
 //Using bodyparser middleware
 app.use(bodyParser.json());
