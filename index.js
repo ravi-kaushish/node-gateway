@@ -15,7 +15,6 @@ app.use(Cors);
 
 //Enabling Logging
 app.use(Logger);
-console.log(process.env.HTTP_LOGGING)
 
 //Using bodyparser middleware
 app.use(bodyParser.json());
