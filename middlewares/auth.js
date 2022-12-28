@@ -1,3 +1,5 @@
+const jwt = require('jsonwebtoken');
+
 exports.Auth = async (req, res, next) => {
     if (process.env.AUTHENTICATION === "enabled") {
         if (req.headers.authorization) {
@@ -6,19 +8,27 @@ exports.Auth = async (req, res, next) => {
                     next();
                 } else {
                     res.status(401).send({
-                        message: "Invalid authorization headeraaaaa"
+                        message: "Invalid authorization header"
                     });
                 }
             } else if (process.env.JWT_AUTH === "enabled") {
-                //check jwt auth here
+                jwt.verify(req.headers.authorization.replace("Bearer ", ""), process.env.JWT_AUTH_SIGNATURE, function (err, decoded) {
+                    if (err) {
+                        res.status(401).send({
+                            message: "Invalid authorization header"
+                        });
+                    } else {
+                        next();
+                    }
+                });
             } else {
                 res.status(401).send({
-                    message: "Invalid authorization headerssssss"
+                    message: "No authorization header provided"
                 });
             }
         } else {
             res.status(401).send({
-                message: "Invalid authorization headercccccccccc"
+                message: "No authorization header provided"
             });
         }
     } else {
