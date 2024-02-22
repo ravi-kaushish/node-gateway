@@ -1,4 +1,4 @@
-module.exports = {
+{
   "aux": {
     "protocol": "https://",
     "host": "api.igniteconnex.io",

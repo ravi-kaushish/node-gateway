@@ -1,11 +1,21 @@
-const express = require("express");
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
 //Importing Handlers
-const { Gateway } = require("../controllers/gateway.js");
-const { Resolver } = require("../middlewares/resolver.js");
+const {
+  gatewayStatus,
+  getServiceConfig,
+  validateRequestAgainstServiceConfig
+} = require('../middlewares/gateway.js')
+const { proxyHTTPRequest } = require('../controllers/proxy.js')
 
 //Defining Routes
-router.all("/:service/*", Resolver, Gateway);
+router.all(
+  '/:service/*',
+  gatewayStatus,
+  getServiceConfig,
+  validateRequestAgainstServiceConfig,
+  proxyHTTPRequest
+)
 
-module.exports = router;
+module.exports = router

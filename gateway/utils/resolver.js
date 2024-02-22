@@ -1,4 +1,4 @@
-const services = require("../setup/services");
+const services = require("./services");
 
 exports.resolver = async (service) => {
   return services[service];
